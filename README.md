@@ -9,6 +9,9 @@ Plateforme PHP/MySQL de réservation pour une agence de voyage camerounaise. Les
 4. Ouvrir `/admin/setup.php` (par exemple `http://localhost/Voyalo/admin/setup.php`) et choisir les identifiants du premier administrateur. Cette page se désactive dès qu'un rôle administrateur existe.
 5. Se connecter : le tableau de bord admin permet de gérer hôtels, chambres, trajets et horaires, circuits et dates de départ, promotions, utilisateurs et agents. Les images acceptées sont JPG, PNG ou WebP (4 Mo maximum).
 
+## Déploiement Vercel
+Le projet utilise le runtime PHP communautaire `vercel-php`. Configurez une base MySQL joignable depuis Vercel, puis ajoutez les variables `DB_HOST`, `DB_NAME`, `DB_USER` et `DB_PASSWORD` dans les paramètres du projet. Les photos téléversées nécessitent un stockage persistant externe ; le système de fichiers des fonctions Vercel n'est pas un stockage permanent.
+
 ## Structure
 `config/` configuration et PDO; `includes/` sécurité, fonctions, layout; `assets/` CSS/JS; `api/` endpoints JSON; `admin/`, `agent/`, `client/` espaces métier; pages racine pour catalogue, authentification et checkout; `uploads/` médias ajoutés par l'exploitant.
 

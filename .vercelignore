@@ -1,0 +1,5 @@
+.git
+.git/**
+config/config.php
+uploads/*
+!uploads/.gitkeep
