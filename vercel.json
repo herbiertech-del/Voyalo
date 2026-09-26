@@ -1,20 +1,27 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "*.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "admin/*.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "agent/*.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "api/*.php": {
+    "api/index.php": {
       "runtime": "vercel-php@0.9.0"
     }
   },
   "rewrites": [
-    { "source": "/", "destination": "/index.php" }
+    { "source": "/", "destination": "/api/index.php?__voyalo_route=/index.php" },
+    { "source": "/index.php", "destination": "/api/index.php?__voyalo_route=/index.php" },
+    { "source": "/hotels.php", "destination": "/api/index.php?__voyalo_route=/hotels.php" },
+    { "source": "/hotel-detail.php", "destination": "/api/index.php?__voyalo_route=/hotel-detail.php" },
+    { "source": "/billets.php", "destination": "/api/index.php?__voyalo_route=/billets.php" },
+    { "source": "/forfaits.php", "destination": "/api/index.php?__voyalo_route=/forfaits.php" },
+    { "source": "/checkout.php", "destination": "/api/index.php?__voyalo_route=/checkout.php" },
+    { "source": "/login.php", "destination": "/api/index.php?__voyalo_route=/login.php" },
+    { "source": "/register.php", "destination": "/api/index.php?__voyalo_route=/register.php" },
+    { "source": "/logout.php", "destination": "/api/index.php?__voyalo_route=/logout.php" },
+    { "source": "/dashboard.php", "destination": "/api/index.php?__voyalo_route=/dashboard.php" },
+    { "source": "/admin/index.php", "destination": "/api/index.php?__voyalo_route=/admin/index.php" },
+    { "source": "/admin/catalog.php", "destination": "/api/index.php?__voyalo_route=/admin/catalog.php" },
+    { "source": "/admin/export.php", "destination": "/api/index.php?__voyalo_route=/admin/export.php" },
+    { "source": "/admin/setup.php", "destination": "/api/index.php?__voyalo_route=/admin/setup.php" },
+    { "source": "/agent/index.php", "destination": "/api/index.php?__voyalo_route=/agent/index.php" },
+    { "source": "/api/availability.php", "destination": "/api/index.php?__voyalo_route=/api/availability.php" }
   ]
 }
