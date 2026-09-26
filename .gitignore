@@ -1,0 +1,17 @@
+# Configuration locale et secrets
+/config/config.php
+/.env
+/.env.*
+!.env.example
+
+# Médias ajoutés depuis l'interface d'administration
+/uploads/*
+!/uploads/.gitkeep
+
+# Fichiers temporaires et journaux
+*.log
+*.tmp
+/vendor/
+/node_modules/
+.DS_Store
+Thumbs.db
